@@ -6,6 +6,30 @@
   padding: 6rem;
   min-height: 100vh;
 }
+.buttonRow {
+  display: flex;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.numericButton {
+  font-size: 50px;
+  cursor: pointer;
+  padding: 3%;
+}
+
+.operationButton {
+  font-size: 50px;
+  cursor: pointer;
+  padding: 3%;
+  
+}
+
+.visor {
+  border: 1px solid black ;
+  padding: 5px;
+  font-size: 50px;
+}
 
 .description {
   display: inherit;
