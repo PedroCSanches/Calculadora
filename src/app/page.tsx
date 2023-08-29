@@ -43,40 +43,53 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-      <div className={styles.visor}>
-        {num1} {op} {num2} {result==""? "" : ` = ${result}`}
-      </div>
+      
+      
+      
+      
+      <div className={styles.corpoCalculadora}>
+        <div className={styles.containerVisor}>
+          <div className={styles.visor}>
+            {num1} {op} {num2} {result==""? "" : ` = ${result}`}
+          </div>
+        </div>
+        <div className={styles.containerButtons}>
 
-      <div className={styles.buttonRow}>
-        <button onClick={() => setNumber('1')} className={styles.numericButton}>1</button>
-        <button onClick={() => setNumber('2')} className={styles.numericButton}>2</button>
-        <button onClick={() => setNumber('3')} className={styles.numericButton}>3</button>
-        <button onClick={() => setNumber('4')} className={styles.numericButton}>4</button>
-        <button onClick={() => setNumber('5')} className={styles.numericButton}>5</button>
+            <div className={styles.containerNumbers}>
+            <div className={styles.buttonRow}>
+                <button onClick={() => setNumber('1')} className={styles.numericButton}>1</button>
+                <button onClick={() => setNumber('2')} className={styles.numericButton}>2</button>
+                <button onClick={() => setNumber('3')} className={styles.numericButton}>3</button>
+                
+              </div>
+              <div className={styles.buttonRow}>
+                <button onClick={() => setNumber('4')} className={styles.numericButton}>4</button>
+                <button onClick={() => setNumber('5')} className={styles.numericButton}>5</button>
+                <button onClick={() => setNumber('6')} className={styles.numericButton}>6</button>
+              </div>
+
+              <div className={styles.buttonRow}>
+
+                <button onClick={() => setNumber('7')} className={styles.numericButton}>7</button>
+                <button onClick={() => setNumber('8')} className={styles.numericButton}>8</button>
+                <button onClick={() => setNumber('9')} className={styles.numericButton}>9</button>
+              </div>
+              <div className={styles.buttonRow}>
+                <button onClick={() => setNumber('0')} className={styles.numericButton}>0</button>
+                <button onClick={() => clear()} className={styles.numericButton}>C</button>
+              </div>
+            </div>
+            <div className={styles.containerActions}>
+              <button onClick={() => setOperation('+')} className={styles.operationButton}>+</button>
+              <button onClick={() => setOperation('-')} className={styles.operationButton}>-</button>
+              <button onClick={() => setOperation('/')} className={styles.operationButton}>÷</button>
+              <button onClick={() => setOperation('*')} className={styles.operationButton}>x</button>
+              <button onClick={() => getResult()} className={styles.operationButton}>=</button>
+            </div>
+        </div>
       </div>
-      <div className={styles.buttonRow}>
-        <button onClick={() => setNumber('6')} className={styles.numericButton}>6</button>
-        <button onClick={() => setNumber('7')} className={styles.numericButton}>7</button>
-        <button onClick={() => setNumber('8')} className={styles.numericButton}>8</button>
-        <button onClick={() => setNumber('9')} className={styles.numericButton}>9</button>
-        <button onClick={() => setNumber('0')} className={styles.numericButton}>0</button>
-      </div>
-      <div className={styles.buttonRow}>
-        <button onClick={() => setOperation('+')} className={styles.operationButton}>+</button>
-        <button onClick={() => setOperation('-')} className={styles.operationButton}>-</button>
-        <button onClick={() => setOperation('/')} className={styles.operationButton}>÷</button>
-        <button onClick={() => setOperation('*')} className={styles.operationButton}>x</button>
-        <button onClick={() => getResult()} className={styles.operationButton}>=</button>
-        <button onClick={() => clear()} className={styles.operationButton}>C</button>
-      </div>
-    
-    
-    
-    
-    
-    
-    
-    
+      
+  
     </main>
   )
 }
